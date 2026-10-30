@@ -86,7 +86,8 @@
   "camera": {
     "unavailable": "No camera image",
     "disabled": "Camera disabled",
-    "fullscreen": "Fullscreen"
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen"
   },
   "settings": {
     "title": "Settings",

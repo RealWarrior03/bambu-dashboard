@@ -91,10 +91,14 @@ interface FanProps {
   onSet: (percent: number) => Promise<boolean>;
 }
 
+const FAN_STEP = 10;
+
 export function FanControl({ label, value, disabled, onSet }: FanProps) {
   const pending = usePending(value, (a, b) => a !== null && b !== null && Math.abs(a - b) <= 7);
   const [drag, setDrag] = useState<number | null>(null);
   const shown = drag ?? pending.value ?? 0;
+  // The printer reports 15 levels (e.g. 67%); the thumb snaps to the slider step, so the fill must too.
+  const position = Math.round(shown / FAN_STEP) * FAN_STEP;
 
   const commit = async () => {
     if (drag === null) return;
@@ -114,10 +118,10 @@ export function FanControl({ label, value, disabled, onSet }: FanProps) {
         type="range"
         min={0}
         max={100}
-        step={10}
-        value={shown}
+        step={FAN_STEP}
+        value={position}
         disabled={disabled}
-        style={{ '--fill': `${shown}%` } as CSSProperties}
+        style={{ '--fill': position / 100 } as CSSProperties}
         onChange={(e) => setDrag(Number(e.target.value))}
         onPointerUp={commit}
         onKeyUp={commit}

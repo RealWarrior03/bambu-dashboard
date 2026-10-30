@@ -635,6 +635,9 @@ select {
   font-weight: 600;
 }
 input[type='range'] {
+  --thumb: 20px;
+  /* The thumb centre travels from thumb/2 to 100% - thumb/2, so the fill has to as well. */
+  --fill-end: calc(var(--thumb) / 2 + (100% - var(--thumb)) * var(--fill, 0));
   -webkit-appearance: none;
   appearance: none;
   height: 8px;
@@ -643,21 +646,23 @@ input[type='range'] {
   border-radius: 999px;
   background: linear-gradient(
     to right,
-    var(--accent) var(--fill, 0%),
-    var(--surface-2) var(--fill, 0%)
+    var(--accent) var(--fill-end),
+    var(--surface-2) var(--fill-end)
   );
 }
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
+  box-sizing: border-box;
+  width: var(--thumb);
+  height: var(--thumb);
   border-radius: 50%;
   background: var(--surface);
   border: 2px solid var(--accent);
 }
 input[type='range']::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
+  box-sizing: border-box;
+  width: var(--thumb);
+  height: var(--thumb);
   border-radius: 50%;
   background: var(--surface);
   border: 2px solid var(--accent);

@@ -21,6 +21,19 @@ export function CameraView({ printer, mode }: Props) {
   const [tick, setTick] = useState(() => Date.now());
   const ref = useRef<HTMLDivElement>(null);
   const disabled = printer.camera.mode === 'none';
+  const [fullscreen, setFullscreen] = useState(false);
+
+  // Follows the real state, so leaving with Escape also resets the button.
+  useEffect(() => {
+    const onChange = () => setFullscreen(document.fullscreenElement === ref.current);
+    document.addEventListener('fullscreenchange', onChange);
+    return () => document.removeEventListener('fullscreenchange', onChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (fullscreen) document.exitFullscreen?.();
+    else ref.current?.requestFullscreen?.();
+  };
 
   // Retry a failed stream every few seconds, and refresh snapshots periodically.
   useEffect(() => {
@@ -52,10 +65,25 @@ export function CameraView({ printer, mode }: Props) {
       {mode === 'stream' && !failed && (
         <button
           className="camera-fullscreen icon-btn"
-          title={t('camera.fullscreen')}
-          onClick={() => ref.current?.requestFullscreen?.()}
+          title={fullscreen ? t('camera.exitFullscreen') : t('camera.fullscreen')}
+          aria-label={fullscreen ? t('camera.exitFullscreen') : t('camera.fullscreen')}
+          aria-pressed={fullscreen}
+          onClick={toggleFullscreen}
         >
-          ⤢
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d={
+                fullscreen
+                  ? 'M9 3v6H3M15 3v6h6M9 21v-6H3M15 21v-6h6'
+                  : 'M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6'
+              }
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       )}
     </div>
