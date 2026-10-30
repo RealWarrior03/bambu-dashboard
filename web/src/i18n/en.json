@@ -1,0 +1,128 @@
+{
+  "app": { "title": "Printer Dashboard" },
+  "nav": { "overview": "Overview", "settings": "Settings", "logout": "Log out" },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "loading": "Loading …"
+  },
+  "login": {
+    "title": "Sign in",
+    "password": "Password",
+    "submit": "Sign in",
+    "invalid": "Wrong password",
+    "tooMany": "Too many attempts, please wait a minute"
+  },
+  "conn": {
+    "connecting": "Connecting …",
+    "online": "Connected",
+    "offline": "Offline",
+    "error": "Error"
+  },
+  "job": {
+    "IDLE": "Idle",
+    "PREPARE": "Preparing",
+    "RUNNING": "Printing",
+    "PAUSE": "Paused",
+    "FINISH": "Finished",
+    "FAILED": "Cancelled",
+    "UNKNOWN": "Unknown"
+  },
+  "overview": {
+    "empty": "No printer set up yet.",
+    "addPrinter": "Add printer"
+  },
+  "printer": {
+    "layer": "Layer {{layer}} / {{total}}",
+    "remaining": "Remaining",
+    "eta": "Done at",
+    "noJob": "No active print",
+    "pause": "Pause",
+    "resume": "Resume",
+    "stop": "Stop",
+    "stopConfirm": "Really stop the print? This cannot be undone.",
+    "refresh": "Reload status",
+    "wifi": "Wi-Fi"
+  },
+  "temp": {
+    "title": "Temperatures",
+    "nozzle": "Nozzle",
+    "bed": "Bed",
+    "chamber": "Chamber",
+    "target": "Target",
+    "set": "Set",
+    "off": "Off"
+  },
+  "fan": { "title": "Fans", "part": "Part cooling", "aux": "Auxiliary", "chamber": "Chamber" },
+  "speed": {
+    "title": "Print speed",
+    "1": "Silent",
+    "2": "Standard",
+    "3": "Sport",
+    "4": "Ludicrous"
+  },
+  "light": { "title": "Light" },
+  "filament": {
+    "title": "Filament",
+    "external": "External spool",
+    "externalN": "External spool {{n}}",
+    "ams": "AMS",
+    "ams_lite": "AMS lite",
+    "ams_ht": "AMS HT",
+    "ams_2_pro": "AMS 2 Pro",
+    "empty": "Empty",
+    "active": "Active",
+    "humidity": "Humidity",
+    "remain": "Left",
+    "edit": "Edit filament",
+    "type": "Material",
+    "color": "Color",
+    "nozzleMin": "Nozzle min °C",
+    "nozzleMax": "Nozzle max °C"
+  },
+  "hms": { "title": "Printer messages" },
+  "camera": {
+    "unavailable": "No camera image",
+    "disabled": "Camera disabled",
+    "fullscreen": "Fullscreen"
+  },
+  "settings": {
+    "title": "Settings",
+    "printers": "Printers",
+    "add": "Add printer",
+    "edit": "Edit",
+    "delete": "Remove",
+    "deleteConfirm": "Remove printer “{{name}}”?",
+    "name": "Name",
+    "host": "IP address",
+    "serial": "Serial number",
+    "accessCode": "Access code",
+    "accessCodeKeep": "Leave empty to keep the stored code",
+    "model": "Model",
+    "camera": "Camera",
+    "cameraPrinter": "Printer camera",
+    "cameraRtsp": "RTSP camera",
+    "cameraNone": "None",
+    "rtspUrl": "RTSP URL",
+    "test": "Test camera",
+    "testing": "Testing …",
+    "testFailed": "No image: {{msg}}",
+    "testSaveFirst": "Save the printer to test its built-in camera.",
+    "appearance": "Appearance",
+    "language": "Language",
+    "theme": "Theme",
+    "themeAuto": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "hintLan": "You find the IP address and access code on the printer under Settings → WLAN / Network. Depending on the firmware, the printer only accepts control commands in LAN-only mode with Developer Mode enabled.",
+    "hintLiveview": "X1, H2D and P2S: enable “LAN Only Liveview” on the printer so the camera is reachable."
+  },
+  "errors": {
+    "printer_offline": "Printer is not connected",
+    "access_code_required": "Access code is missing",
+    "invalid_request": "Invalid input",
+    "generic": "Error: {{msg}}"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "app": { "title": "Drucker-Dashboard" },
+  "nav": { "overview": "Übersicht", "settings": "Einstellungen", "logout": "Abmelden" },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "loading": "Lädt …"
+  },
+  "login": {
+    "title": "Anmelden",
+    "password": "Passwort",
+    "submit": "Anmelden",
+    "invalid": "Falsches Passwort",
+    "tooMany": "Zu viele Versuche, bitte eine Minute warten"
+  },
+  "conn": {
+    "connecting": "Verbinde …",
+    "online": "Verbunden",
+    "offline": "Offline",
+    "error": "Fehler"
+  },
+  "job": {
+    "IDLE": "Bereit",
+    "PREPARE": "Vorbereitung",
+    "RUNNING": "Druckt",
+    "PAUSE": "Pausiert",
+    "FINISH": "Fertig",
+    "FAILED": "Abgebrochen",
+    "UNKNOWN": "Unbekannt"
+  },
+  "overview": {
+    "empty": "Noch kein Drucker eingerichtet.",
+    "addPrinter": "Drucker hinzufügen"
+  },
+  "printer": {
+    "layer": "Schicht {{layer}} / {{total}}",
+    "remaining": "Restzeit",
+    "eta": "Fertig um",
+    "noJob": "Kein aktiver Druck",
+    "pause": "Pausieren",
+    "resume": "Fortsetzen",
+    "stop": "Abbrechen",
+    "stopConfirm": "Druck wirklich abbrechen? Das lässt sich nicht rückgängig machen.",
+    "refresh": "Status neu laden",
+    "wifi": "WLAN"
+  },
+  "temp": {
+    "title": "Temperaturen",
+    "nozzle": "Düse",
+    "bed": "Heizbett",
+    "chamber": "Bauraum",
+    "target": "Soll",
+    "set": "Setzen",
+    "off": "Aus"
+  },
+  "fan": {
+    "title": "Lüfter",
+    "part": "Bauteillüfter",
+    "aux": "Hilfslüfter",
+    "chamber": "Bauraumlüfter"
+  },
+  "speed": {
+    "title": "Druckgeschwindigkeit",
+    "1": "Leise",
+    "2": "Standard",
+    "3": "Sport",
+    "4": "Ludicrous"
+  },
+  "light": { "title": "Licht" },
+  "filament": {
+    "title": "Filament",
+    "external": "Externe Spule",
+    "externalN": "Externe Spule {{n}}",
+    "ams": "AMS",
+    "ams_lite": "AMS lite",
+    "ams_ht": "AMS HT",
+    "ams_2_pro": "AMS 2 Pro",
+    "empty": "Leer",
+    "active": "Aktiv",
+    "humidity": "Feuchte",
+    "remain": "Rest",
+    "edit": "Filament bearbeiten",
+    "type": "Material",
+    "color": "Farbe",
+    "nozzleMin": "Düse min. °C",
+    "nozzleMax": "Düse max. °C"
+  },
+  "hms": { "title": "Meldungen des Druckers" },
+  "camera": {
+    "unavailable": "Kein Kamerabild",
+    "disabled": "Kamera deaktiviert",
+    "fullscreen": "Vollbild"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "printers": "Drucker",
+    "add": "Drucker hinzufügen",
+    "edit": "Bearbeiten",
+    "delete": "Entfernen",
+    "deleteConfirm": "Drucker „{{name}}“ entfernen?",
+    "name": "Name",
+    "host": "IP-Adresse",
+    "serial": "Seriennummer",
+    "accessCode": "Access Code",
+    "accessCodeKeep": "Leer lassen, um den gespeicherten Code zu behalten",
+    "model": "Modell",
+    "camera": "Kamera",
+    "cameraPrinter": "Drucker-Kamera",
+    "cameraRtsp": "RTSP-Kamera",
+    "cameraNone": "Keine",
+    "rtspUrl": "RTSP-URL",
+    "test": "Kamera testen",
+    "testing": "Teste …",
+    "testFailed": "Kein Bild: {{msg}}",
+    "testSaveFirst": "Speichere den Drucker, um die Drucker-Kamera zu testen.",
+    "appearance": "Darstellung",
+    "language": "Sprache",
+    "theme": "Farbschema",
+    "themeAuto": "System",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "hintLan": "IP-Adresse und Access Code findest du am Drucker unter Einstellungen → WLAN bzw. Netzwerk. Je nach Firmware nimmt der Drucker Steuerbefehle nur im LAN-only-Modus mit aktiviertem Entwicklermodus an.",
+    "hintLiveview": "X1, H2D und P2S: „LAN Only Liveview“ am Drucker aktivieren, damit die Kamera erreichbar ist."
+  },
+  "errors": {
+    "printer_offline": "Drucker ist nicht verbunden",
+    "access_code_required": "Access Code fehlt",
+    "invalid_request": "Ungültige Eingabe",
+    "generic": "Fehler: {{msg}}"
+  }
+}
